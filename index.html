@@ -529,7 +529,7 @@
                         </div>
                       </div>
                       <div class="row">
-                        <p id="my-form-status" class="col">Thank you for contacting me. I'll get back to you as soon as possible</p>
+                        <p id="my-form-status" class="col"></p>
                       </div>
                     </form>
                   </div>
@@ -587,7 +587,7 @@ async function handleSubmit(event) {
     }
   }).then(response => {
     if (response.ok) {
-      status.innerHTML = "Thanks for your submission!";
+      status.innerHTML = "Thank you for contacting me. I'll get back to you as soon as possible";
       status.style.color = "green"; // Set success message color
       form.reset();
     } else {
