@@ -573,7 +573,7 @@
 
 <!-- Place this script at the end of the body tag -->
 <script>
-    var form = document.getElementById("my-form");
+   var form = document.getElementById("my-form");
 
 async function handleSubmit(event) {
   event.preventDefault();
@@ -587,7 +587,7 @@ async function handleSubmit(event) {
     }
   }).then(response => {
     if (response.ok) {
-      status.innerHTML = "Thank you for contacting me. I'll get back to you as soon as possible";
+      status.innerHTML = "Thanks for your submission!";
       status.style.color = "green"; // Set success message color
       form.reset();
     } else {
@@ -602,16 +602,19 @@ async function handleSubmit(event) {
     }
     setTimeout(function () {
       status.innerHTML = ""; // Clear the status message after 3 seconds
+      status.style.color = ""; // Reset the color
     }, 3000);
   }).catch(error => {
     status.innerHTML = "Oops! There was a problem submitting your form";
     status.style.color = "red"; // Set failure message color
     setTimeout(function () {
       status.innerHTML = ""; // Clear the status message after 3 seconds
+      status.style.color = ""; // Reset the color
     }, 3000);
   });
 }
 
 form.addEventListener("submit", handleSubmit);
+
 
 </script>
